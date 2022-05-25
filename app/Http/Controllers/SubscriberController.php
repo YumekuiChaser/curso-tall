@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SubscriberController extends Controller
 {
     public function verify(Subscriber $subscriber){
-        if($subscriber->hasVerifiedEmail()){
+        if(!$subscriber->hasVerifiedEmail()){
             $subscriber->markEmailAsVerified();
         }
 
