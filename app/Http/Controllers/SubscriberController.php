@@ -14,4 +14,9 @@ class SubscriberController extends Controller
 
         return redirect('/?verified=1');
     }
+
+    public function all(){
+        //Returns all subscribers
+        return view('subscribers.all');
+    }
 }
